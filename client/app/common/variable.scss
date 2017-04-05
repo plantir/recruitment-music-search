@@ -1,0 +1,33 @@
+$primaryColor : #0277bd;
+$accentColor : #1de9b6;
+$pink : #d05d84;
+
+$bgColor : #efefef;
+$darkBgColor : #263238;
+$lightBgColor : #37474f;
+$lightTextColor: #f5f5f5;
+$darkTextColor : #212121;
+$headerBgColor1:#ce4283;
+$headerBgColor2:#b2455d;
+$footerBgColor:#333441;
+$footerColor:#fff;
+$searchBgColor: #333441;
+$searchResultBgColor: #383a49;
+
+
+$break-medium: 600px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == tablet {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+   @else if $media == largeDesktop {
+    @media only screen and (min-width: $break-xlarge) { @content; }
+  }
+
+}

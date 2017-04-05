@@ -1,0 +1,19 @@
+<div class="clearfix searchItem" ng-click="$ctrl.openDialog($ctrl.id, $ctrl.type, $ctrl.image, $ctrl.name)">
+  <div class="box-shadow">
+    <div class="item-image">
+      <img ng-src="{{$ctrl.image}}">
+      <div class="type-icon" ng-class="$ctrl.type">
+
+      </div>
+      <div class="show-desktop hovered-item">
+        <h3>View {{$ctrl.type == 'album'?'Tracks':'Albums'}}</h3>
+      </div>
+    </div>
+
+    <div class="item-title">
+      <h3>
+        {{$ctrl.name}}
+      </h3>
+    </div>
+  </div>
+</div>

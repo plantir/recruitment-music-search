@@ -1,0 +1,17 @@
+<div class="album">
+  <div class="album-detail clearfix" style="background-image:url({{$ctrl.image}})">
+
+    <img class="hide-desktop" ng-src="{{$ctrl.image}}" alt="{{$ctrl.name}}">
+    <h3 class="caption hide-desktop">Tracks on</h3>
+    <h3>{{ $ctrl.name }}</h3>
+  </div>
+  <div class="track-list">
+    <h3 class="show-desktop">Tracks</h3>
+    
+    <div ng-repeat="track in $ctrl.tracks" class="clearfix">
+      <h3>{{track.name}}</h3>
+      <h4 class="caption">{{track.duration_ms | toMinute}}</h4>
+    </div>
+    <a ng-click="$ctrl.showMore()" ng-show="$ctrl.hasMore" class="button pink curve white-color">Show More</a>
+  </div>
+</div>

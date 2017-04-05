@@ -1,0 +1,14 @@
+@import "common/common";
+@font-face{
+  font-family: "Raleway-italic";
+  src: url('/Assets/Fonts/raleway/Raleway-MediumItalic.ttf');
+  font-style: italic;
+}
+@font-face{
+  font-family: "Raleway";
+  src: url('/Assets/Fonts/raleway/Raleway-Light.ttf');
+}
+
+app{
+  font-family: "Raleway";
+}

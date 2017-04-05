@@ -1,0 +1,17 @@
+<div class="artist">
+  <div class="artist-detail clearfix" style="background-image: url({{$ctrl.image}})">
+
+    <img class="hide-desktop" ng-src="{{$ctrl.image}}" alt="{{$ctrl.name}}">
+    <h3 class="caption hide-desktop">Albums by</h3>
+    <h3>{{ $ctrl.name }}</h3>
+  </div>
+  <div class="album-list">
+    <h3 class="show-desktop">Albums</h3>
+    <div ng-repeat="album in $ctrl.albums" class="clearfix" ng-click="$ctrl.openDialog(album.id,album.type,album.images[1].url, album.name)">
+      <img ng-src="{{album.images[2].url}}" alt="{{album.name}}">
+      <h3>{{album.name}}</h3>
+      
+    </div>
+    <a ng-click="$ctrl.showMore()" ng-show="$ctrl.hasMore" class="button pink curve white-color">Show More</a>
+  </div>
+</div>

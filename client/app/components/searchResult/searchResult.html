@@ -1,0 +1,16 @@
+<div class="searchResult">
+  <div class="search-holder show-desktop" ng-if="!$ctrl.searchItem">
+    <span>Your results will appear here</span>
+  </div>
+  <div class="clearfix" ng-if="$ctrl.searchItem && $ctrl.searchItem.length > 0">
+    <search-item item-name="item.name" item-type="item.type" item-image="item.images[1].url" item-id="item.id" ng-repeat="item in $ctrl.searchItem"></search-item>
+  </div>
+  <div ng-if="$ctrl.searchItem && $ctrl.searchItem.length > 0">
+    <a class="button curve pink white-color" ng-show="$ctrl.hasMore" ng-click="$ctrl.showMore()">
+      <i class="fa fa-spinner fa-pulse" ng-show="$ctrl.showMoreLoading">
+    </i> SHOW ME MORE!</a>
+  </div>
+  <div class="no-item" ng-if="$ctrl.searchItem && $ctrl.searchItem.length == 0">
+    No Result.
+  </div>
+</div>
